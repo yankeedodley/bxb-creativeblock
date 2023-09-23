@@ -6,7 +6,7 @@ import random as r
 r.randint(1,3)
 
 # Title
-st.title("Hi!")
+st.title("Hi! loo")
 
 st.subheader("Welcome to the ideas generator!")
 topic = None
