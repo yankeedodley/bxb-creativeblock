@@ -6,7 +6,7 @@ st.title("Hi!")
 
 st.subheader("Welcome to the ideas generator!")
 
-if st.selectbox("The blog."):
+if st.checkbox("The blog."):
     st.write("A lot of people in the world are suffring from creative block. So, we dicided to interveiw our friend chunny who had creative block, to see his experience.")
     st.write('After the interveiw, chunny told us creative block really sucks."It really sucks." Says chunny. "Its like you cant think of anything. Your brain is basicaly dead."')
     st.write('Luckely for chunny, we made this website to help him. "Its great!" he says "I can think again!"')
