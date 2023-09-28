@@ -1,5 +1,6 @@
 # import module
 import streamlit as st
+from PIL import Image
 
 # Title
 st.title("Hi!")
@@ -7,9 +8,9 @@ st.title("Hi!")
 st.subheader("Welcome to the ideas generator!")
 
 if st.checkbox("The blog."):
-    st.write("A lot of people in the world are suffring from creative block. So, we dicided to interveiw our friend chunny who had creative block, to see his experience.")
-    st.write('After the interveiw, chunny told us creative block really sucks."It really sucks." Says chunny. "Its like you cant think of anything. Your brain is basicaly dead."')
-    st.write('Luckely for chunny, we made this website to help him. "Its great!" he says "I can think again!"')
+    st.write("A lot of people in the world are suffering from creative block. So, we dicided to interveiw our friend Chunny who had creative block, to see his experience.")
+    st.write('After the interveiw, Chunny told us creative block really sucks."It really sucks." Says chunny. "Its like you cant think of anything. Your brain is basicaly dead."')
+    st.write('Luckly for Chunny, we made this website to help him. "Its great!" He says "I can think again!"')
 topic = None
 topic = st.selectbox("Please select one topic to generate ideas on:",
     ['Painting', 'Music' , 'Sculptures', 'Nonfiction', 'Fiction', 'Videos'])
@@ -51,3 +52,5 @@ st.write("Step three: Make a picture related to the word.")
 
 if st.checkbox("Deffeneatly not rickroll. click it."):
     st.write("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+    img = Image.open("201219.png")
+    st.image(img)
