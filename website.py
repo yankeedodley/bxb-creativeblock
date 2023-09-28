@@ -46,3 +46,8 @@ st.header("How to come up with your own ideas:")
 st.write("Step one: Think about what your latest peices are. What do you like?")
 st.write("Step two: Write the things down.")
 st.write("Step three: Make a picture related to the word.")
+
+
+
+if st.checkbox("Deffeneatly not rickroll. click it."):
+    st.write("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
