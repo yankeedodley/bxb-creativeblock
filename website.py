@@ -52,5 +52,5 @@ st.write("Step three: Make a picture related to the word.")
 
 if st.checkbox("Deffeneatly not rickroll. click it."):
     st.write("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
-    img = Image.open("201219.png")
-    st.image(img)
+    
+
