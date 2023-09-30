@@ -1,46 +1,65 @@
 # import module
 import streamlit as st
 from PIL import Image
+import random
 
 # Title
 st.title("Hi!")
 
-st.subheader("Welcome to the ideas generator!")
+st.header("Welcome to the ideas generator!")
 
 if st.checkbox("The blog."):
-    st.write("A lot of people in the world are suffering from creative block. So, we dicided to interveiw our friend Chunny who had creative block, to see his experience.")
-    st.write('After the interveiw, Chunny told us creative block really sucks."It really sucks." Says chunny. "Its like you cant think of anything. Your brain is basicaly dead."')
-    st.write('Luckly for Chunny, we made this website to help him. "Its great!" He says "I can think again!"')
+    st.write("Creative block is a common experience for people of all creative disciplines. It's the feeling of being stuck, unable to come up with new ideas or produce your best work.")
+    st.write('In this blog, we dicided to interview our friend Chunny, who recently experienced creative block.')
+    st.write('Us: "So Chunny, how did creative block feel like?"')
+    st.write('Chunny: "Creative block really sucks. Its like you cant think of anything. Your brain is basically dead."')
+    st.write('Us: "What made you get creative block?"')
+    st.write('Chunny: "Our art teacher told us to paint something, and I couldnt think of any good ideas."')
+    st.write('Us: "How did you overcome it?"')
+    st.write('Chunny: "I was lucky enough to have a friend who helped me. They made a website that helps people with creative block."')
+    st.write('"Its great!" He says "I can think again!"')
+
 topic = None
+topics = None
 topic = st.selectbox("Please select one topic to generate ideas on:",
     ['Painting', 'Music' , 'Sculptures', 'Nonfiction', 'Fiction', 'Videos'])
 
-if(st.button("Submit")):
+if st.button("Submit"):
+    # Generate a list of unique random integers between 1 and 5
+    random_numbers = random.sample(range(1, 6), 3)
+    
     st.subheader("Here's some ideas:")
-    if(topic == "Painting"):
-        st.write("Nature")
-        st.write("Self portrate")
-        st.write("Man made things")
-    elif(topic == "Music"):
-        st.write("Classical")
-        st.write("Fast and hard")
-        st.write("Slow and calming")
-    elif(topic == "Sculptures"):
-        st.write("Nature")
-        st.write("Humans")
-        st.write("Objects")
-    elif(topic == "Nonfiction"):
-        st.write("Living things")
-        st.write("How machines work")
-        st.write("The history of ___")
-    elif(topic == "Fiction"):
-        st.write("Survival")
-        st.write("Adventure")
-        st.write("Sorry")
+    if topic == "Painting":
+        topics = ["Nature", "Self portrait", "Vehicles", "Thinking... Plz reload page.", "Stuff"]
+        for r in random_numbers:
+            st.write(topics[r - 1])
+
+    elif topic == "Music":
+        topics = ["Classical", "Fast and hard", "Slow and calming", "A", "B"]
+        for r in random_numbers:
+            st.write(topics[r - 1])
+
+    elif topic == "Sculptures":
+        topics = ["Nature", "Humans", "Objects", "C", "D"]
+        for r in random_numbers:
+            st.write(topics[r - 1])
+        
+    elif topic == "Nonfiction":
+        topics = ["Living things", "How machines work", "The history of ___", "E", "F"]
+        for r in random_numbers:
+            st.write(topics[r - 1])
+
+    elif topic == "Fiction":
+        topics = ["Survival", "Adventure", "Sorry", "G", "H"]
+        for r in random_numbers:
+            st.write(topics[r - 1])
+
     else:
-        st.write("Video games")
-        st.write("Busting myths")
-        st.write("Try not too laugh")
+        topics = ["Videogames", "Busting myths", "Try not to laugh", "I", "J"]
+        
+        for r in random_numbers:
+            st.write(topics[r - 1])
+
     st.write("For more ideas, please search", topic, "on google.")
     st.subheader("Don't worry if your topic isn't perfect. Just try your best.")
 st.header("How to come up with your own ideas:")
@@ -50,7 +69,5 @@ st.write("Step three: Make a picture related to the word.")
 
 
 
-if st.checkbox("Deffeneatly not rickroll. click it."):
-    st.write("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
-    
-
+if st.checkbox("Disclamer"):
+    st.write("None of the blog is real. We just made that up for this demo.")
